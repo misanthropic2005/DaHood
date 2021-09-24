@@ -2361,6 +2361,7 @@ function bungiesLibrary.Load(SelectedLibrary)
                             ColorSequenceKeypoint.new(0.00, Color3.fromRGB(27, 27, 27)),
                             ColorSequenceKeypoint.new(1.00, Color3.fromRGB(29, 29, 29))
                            }
+                           end
                         end
                         
                         return CheckTools
