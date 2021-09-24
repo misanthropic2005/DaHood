@@ -2348,7 +2348,6 @@ function bungiesLibrary.Load(SelectedLibrary)
                         end                
                         function CheckTools.SetState(boolean)
                            Configuration_Check.Script(boolean)
-                           ToggleEnabled = boolean
                         end
                         
                         return CheckTools
