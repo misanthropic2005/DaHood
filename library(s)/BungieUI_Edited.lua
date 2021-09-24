@@ -2348,6 +2348,19 @@ function bungiesLibrary.Load(SelectedLibrary)
                         end                
                         function CheckTools.SetState(boolean)
                            Configuration_Check.Script(boolean)
+                           ToggleEnabled = boolean
+                           
+                           if boolean then
+                            gradient_design_button_toggle_2.Color = 
+                            ColorSequence.new {
+                            ColorSequenceKeypoint.new(0.00, Color3.fromRGB(102, 78, 167)),
+                            ColorSequenceKeypoint.new(1.00, Color3.fromRGB(70, 53, 115))
+                           } else
+                            gradient_design_button_toggle_2.Color = 
+                            ColorSequence.new {
+                            ColorSequenceKeypoint.new(0.00, Color3.fromRGB(27, 27, 27)),
+                            ColorSequenceKeypoint.new(1.00, Color3.fromRGB(29, 29, 29))
+                           }
                         end
                         
                         return CheckTools
