@@ -2,11 +2,11 @@
 
 local Init = { }
 
-function Init.Execute(Script)
+Init.Execute = function(Script)
    loadstring(game:HttpGet("https://raw.githubusercontent.com/misanthropic2005/DaHood/main/script(s)/" .. Script .. ".lua"))()
 end
 
-function Init.GetValue(Table, Type, String, Alt)
+Init.GetValue = function(Table, Type, String, Alt)
    if Type == 1 or Type > 1 then
       
       if Table["KeyBinds"] ~= nil then
