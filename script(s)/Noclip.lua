@@ -29,7 +29,7 @@ end)
 
 game:GetService("RunService").RenderStepped:Connect(function(...)
     if in_lib.GetValue(_G.MetaWareSettings, 0, "NoclipToggled", "Combat") then
-       if pm_lib.Character() tthen       
+       if pm_lib.Character() then       
           for z, x in pairs(pm_lib.Character():GetChildren()) do
              if x:IsA("BasePart") then x.CanCollide = false end
           end
