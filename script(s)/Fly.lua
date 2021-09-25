@@ -187,3 +187,5 @@ local AddFly = function(Part)
         FLYING = false
     end)
 end
+
+local Part = CreateGyroPart(); AddFly(Part); return true
