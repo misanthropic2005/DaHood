@@ -186,6 +186,8 @@ local AddFly = function(Part)
         repeat wait() until not in_lib.GetValue(_G.MetaWareSettings, 0, "FlyToggled", "Combat")
         FLYING = false
     end)
+
+    if in_lib.GetValue(_G.MetaWareSettings, 0, "FlyToggled", "Combat") then FLY() end
 end
 
 local Part = CreateGyroPart(); AddFly(Part); return true
