@@ -30,7 +30,7 @@ kb_lib.ReturnBegan():Connect(function(I, G)
     end
 end)
 
-game:GetService("RunService").RenderStepped:Connect(function(...)
+game:GetService("RunService").Stepped:Connect(function(...)
     if in_lib.GetValue(_G.MetaWareSettings, 0, "NoclipToggled", "Combat") then
        if pm_lib.Character() then       
           for z, x in pairs(pm_lib.Character():GetChildren()) do
