@@ -17,7 +17,7 @@ Init.ChangeValue = function(NewValue, Type, String, Alt)
          local Keys = Table["KeyBinds"]
          
          if Keys[String] ~= nil then
-            return Enum.KeyCode[Keys[String]]
+            Enum.KeyCode[Keys[String]] = NewValue
          else
             return false
          end
@@ -35,7 +35,7 @@ Init.ChangeValue = function(NewValue, Type, String, Alt)
                local AltTable = Bools[Alt]
                
                if AltTable[String] ~= nil then
-                  return AltTable[String]
+                  AltTable[String] = NewValue
                else
                   return false
                end
