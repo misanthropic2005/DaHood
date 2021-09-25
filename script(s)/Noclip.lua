@@ -20,10 +20,13 @@ else
     game:GetService("Players").LocalPlayer:Kick("Noclip failed to init[alize]")
 end
 
-kb_lib.ReturnBegan:Connect(function(I, G)
+kb_lib.ReturnBegan():Connect(function(I, G)
     print(I.KeyCode)
     if I.KeyCode == in_lib.GetValue(_G.MetaWareSettings, 1, "NoclipBind") and not G then
-       in_lib.GetValue(_G.MetaWareSettings, 0, "NoclipToggled", "Combat") = not in_lib.GetValue(_G.MetaWareSettings, 0, "NoclipToggled", "Combat")
+       
+       local NewValue = not in_lib.GetValue(_G.MetaWareSettings, 0, "NoclipToggled", "Combat")
+       
+       in_lib.ChangeValue(NewValue, 0, "NoclipToggled", "Combat")
     end
 end)
 
