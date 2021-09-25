@@ -1,4 +1,5 @@
 local PM = { }
+local Players = game:GetService("Players")
 
 local Player = function()
    return Players.LocalPlayer
