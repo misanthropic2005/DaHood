@@ -109,7 +109,7 @@ local AddFly = function(Part)
 		task.spawn(function()
 			repeat wait()
 				
-				if pm_lib.Humanoid() ~= nil and pm_lib.Humanoid() ~= false then pm_lib.Humanoid().PlatformStand = true end
+			     if pm_lib.Humanoid() ~= nil and pm_lib.Humanoid() ~= false then pm_lib.Humanoid().PlatformStand = true end
 
 				if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 or CONTROL.Q + CONTROL.E ~= 0 then
 					SPEED = 50
