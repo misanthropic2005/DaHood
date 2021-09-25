@@ -21,7 +21,8 @@ else
 end
 
 kb_lib.ReturnBegan:Connect(function(I, G)
-    if I.KeyCode == in_lib.GetValue(_G.MetaWareSettings, 1, "NoclipBind") then
+    print(I.KeyCode, not in_lib.GetValue(_G.MetaWareSettings, 0, "NoclipToggled", "Combat"))
+    if I.KeyCode == in_lib.GetValue(_G.MetaWareSettings, 1, "NoclipBind") and not G then
        in_lib.GetValue(_G.MetaWareSettings, 0, "NoclipToggled", "Combat") = not in_lib.GetValue(_G.MetaWareSettings, 0, "NoclipToggled", "Combat")
     end
 end)
