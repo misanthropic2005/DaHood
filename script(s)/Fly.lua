@@ -70,7 +70,7 @@ local AddFly = function(Part)
    
   Part.ChildRemoved:Connect(function(Child)
        if Child:IsA("Weld") then
-         Player().CharacterAdded:Wait()
+         pm_lib.Player().CharacterAdded:Wait()
           
          local GyroWeld = Instance.new("Weld", Part)
          GyroWeld.Part0 = Part
