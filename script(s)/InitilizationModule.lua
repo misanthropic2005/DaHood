@@ -49,3 +49,5 @@ Init.GetValue = function(Table, Type, String, Alt)
       return false
    end
 end
+
+return Init
