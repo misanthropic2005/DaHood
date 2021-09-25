@@ -3,7 +3,7 @@
 local Init = { }
 
 function Init.Execute(Script)
-   loadstring(game:HttpGet("" .. Script .. ".lua"))()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/misanthropic2005/DaHood/main/script(s)/" .. Script .. ".lua"))()
 end
 
 function Init.GetValue(Table, Type, String, Alt)
