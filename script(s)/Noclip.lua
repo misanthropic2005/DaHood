@@ -5,19 +5,19 @@ local kb_lib = "https://raw.githubusercontent.com/misanthropic2005/DaHood/main/l
 if game:HttpGet(in_lib) then
     in_lib = loadstring(game:HttpGet(in_lib))()
 else
-    game:GetService("Players").LocalPlayer:Kick("Fly failed to init[alize]")
+    game:GetService("Players").LocalPlayer:Kick("Noclip failed to init[alize]")
 end
 
 if game:HttpGet(pm_lib) then
     pm_lib = loadstring(game:HttpGet(pm_lib))()
 else
-    game:GetService("Players").LocalPlayer:Kick("Fly failed to init[alize]")
+    game:GetService("Players").LocalPlayer:Kick("Noclip failed to init[alize]")
 end
 
 if game:HttpGet(kb_lib) then
     kb_lib = loadstring(game:HttpGet(kb_lib))()
 else
-    game:GetService("Players").LocalPlayer:Kick("Fly failed to init[alize]")
+    game:GetService("Players").LocalPlayer:Kick("Noclip failed to init[alize]")
 end
 
 kb_lib.ReturnBegan:Connect(function(I, G)
