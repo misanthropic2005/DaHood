@@ -1,7 +1,7 @@
-local in_lib = "https://raw.githubusercontent.com/misanthropic2005/DaHood/main/script(s)/InitilizationModule.lua"
-local pm_lib = "https://raw.githubusercontent.com/misanthropic2005/DaHood/main/script(s)/PlayerModule.lua"
-local kb_lib = "https://raw.githubusercontent.com/misanthropic2005/DaHood/main/library(s)/KeyLIB_Custom.lua"
-
+local in_lib = "https://raw.githubusercontent.com/misanthropic2005/DaHood/main/script(s)/InitilizationModule.lua" --- init
+local pm_lib = "https://raw.githubusercontent.com/misanthropic2005/DaHood/main/script(s)/PlayerModule.lua" -- player
+local kb_lib = "https://raw.githubusercontent.com/misanthropic2005/DaHood/main/library(s)/KeyLIB_Custom.lua" -- bind
+ 
 if game:HttpGet(in_lib) then
    in_lib = loadstring(game:HttpGet(in_lib))()
 else
