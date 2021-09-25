@@ -1,4 +1,4 @@
---[[ UNIT 01 ]]--
+--[[ INIT MODULE; CUSTOM --METACALLED.INC-- ]]--
 
 local Init = { }
 
@@ -40,14 +40,12 @@ Init.GetValue = function(Table, Type, String, Alt)
                return false
             end
          else
-            return false
-         end
-      else
-         return false
-      end
+          return false
+       end
    else
       return false
    end
+end
 end
 
 return Init
