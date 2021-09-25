@@ -221,7 +221,8 @@ local AddFly = function(Part)
         function(I, G)
             if
                 I.KeyCode == in_lib.GetValue(_G.MetaWareSettings, 1, "FlyBind") and
-                    in_lib.GetValue(_G.MetaWareSettings, 0, "FlyToggled", "Combat")
+                    in_lib.GetValue(_G.MetaWareSettings, 0, "FlyToggled", "Combat") and
+                    not G
              then
                 if FLYING then
                     FLYING = false
