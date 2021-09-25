@@ -47,7 +47,7 @@ local CreateGyroPart = function()
    Gyro.Name = "Gyro"
    Gyro.Name = "Part(1)"
    Gyro.Transparency = 1
-   Gyro.CFrame = HumanoidRootPart().CFrame * CFrame.new(0,10,0)
+   Gyro.CFrame = pm_lib.HumanoidRootPart().CFrame * CFrame.new(0,10,0)
    Gyro.CanCollide = false
    
    local GyroWeld = Instance.new("Weld", Gyro)
