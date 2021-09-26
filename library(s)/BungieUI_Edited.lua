@@ -6,6 +6,21 @@
 
 --  //    stop looking here
 --/ Locals
+
+local FindPlayer = function(PlayerString)
+   local Players = game:GetService("Players")
+   local PlayerString = PlayerString:lower()
+   local PlayerTable = Players:GetPlayers()
+
+   for i = 1,#PlayerTable do 
+      if PlayerTable[i].Name:lower():sub(1,#PlayerString) == PlayerString then
+	     return PlayerTable[i]
+      end
+   end
+    
+   return nil
+end
+
 local Player = game:GetService("Players").LocalPlayer
 local Mouse = Player:GetMouse()
 
@@ -1992,6 +2007,9 @@ function bungiesLibrary.Load(SelectedLibrary)
                         end
                         function ClearLocalTextBoxInput()
                             textbox.Text = ""
+                        end
+                        function TextBoxTools.GetPlayer(string)
+                           return FindPlayer(string) 
                         end
                         return TextBoxTools
                     end
