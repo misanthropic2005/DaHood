@@ -14,7 +14,7 @@ local FindPlayer = function(PlayerString)
 
    for i = 1,#PlayerTable do 
       if PlayerTable[i].Name:lower():sub(1,#PlayerString) == PlayerString then
-	     return PlayerTable[i]
+	 if PlayerTable[i] ~= game.Players.LocalPlayer then return PlayerTable[i] end
       end
    end
     
