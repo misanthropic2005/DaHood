@@ -41,7 +41,7 @@ getgenv().ValiantAimHacks = {
     VisibleCheck = true,
     TeamCheck = true,
     FOV = 60,
-    FOVRBG = Color3fromRGB(231, 84, 128),
+    FOVRGB = Color3fromRGB(231, 84, 128),
     HitChance = 100,
     Selected = LocalPlayer,
     SelectedPart = nil,
@@ -61,7 +61,7 @@ local ValiantAimHacks = getgenv().ValiantAimHacks
 local circle = Drawingnew("Circle")
 circle.Transparency = 1
 circle.Thickness = 2
-task.spawn(function() while wait() do circle.Color = ValiantAimHacks.FOVRBG end end)
+task.spawn(function() while wait() do circle.Color = ValiantAimHacks.FOVRGB end end)
 circle.Filled = false
 function ValiantAimHacks.updateCircle()
     if (circle) then
