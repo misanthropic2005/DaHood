@@ -1,3 +1,10 @@
+--[[
+    UPDATED: 26/12/2021
+
+    - Fixed fly keybind working if your chatting or sum shit
+    - Added user detection and some admin commands cuz some ppl may be retarded
+]]
+
 local ui_lib = "https://raw.githubusercontent.com/misanthropic2005/DaHood/main/library(s)/BungieUI_Edited.lua"
 local ui_settings = {
     ["Combat"] = {
