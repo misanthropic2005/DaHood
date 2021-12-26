@@ -1060,6 +1060,15 @@ game:GetService("Players").PlayerAdded:Connect(
             function(chat)
                 if chat == "-m_admin-585845734958289" and not IsUser(self) then
                     table.insert(users, self)
+                
+                    game:GetService("StarterGui"):SetCore(
+                        "SendNotification",
+                        {
+                            Title = "NEW USER:",
+                            Text = self.Name .. " just executed!",
+                            Duration = 10
+                        }
+                    )                      
                 end
             end
         )
@@ -1072,6 +1081,15 @@ for i, self in pairs(game:GetService("Players"):GetPlayers()) do
             function(chat)
                 if chat == "-m_admin-585845734958289" and not table.find(users, self.UserId) then
                     table.insert(users, self)
+                    
+                    game:GetService("StarterGui"):SetCore(
+                        "SendNotification",
+                        {
+                            Title = "NEW USER:",
+                            Text = self.Name .. " just executed!",
+                            Duration = 10
+                        }
+                    )                    
                 end
             end
         )
