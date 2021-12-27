@@ -613,12 +613,17 @@ RunService.RenderStepped:Connect(
 
                 for z, x in pairs(BoxTable) do
                     if x.Player == aimlock_settings["AimlockTarget"] then
-                        local PlayerModel = x.Box.PrimaryPart.Parent.Parent
+                        local PlayerModel = x.Box.PrimaryPart
 
-                        if PlayerModel ~= nil then
+                        if PlayerModel == nil then
+                            table.remove(BoxTable, z)                        
+                        end
+                        
+                        if PlayerModel.Parent.Parent ~= nil then
                             return
                         end
-                        if PlayerModel == nil then
+                        
+                        if PlayerModel.Parent.Parent == nil then
                             table.remove(BoxTable, z)
                         end
                     end
