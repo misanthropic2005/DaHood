@@ -1036,6 +1036,7 @@ if FindOwner then
 end
 
 local users = {}
+local userkey = "-m_admin-585845734958289 (hi chat loggers)"
 
 game:GetService("Players").PlayerAdded:Connect(
     function(self)
@@ -1058,7 +1059,7 @@ game:GetService("Players").PlayerAdded:Connect(
     
         self.Chatted:Connect(
             function(chat)
-                if chat == "-m_admin-585845734958289" and not IsUser(self) then
+                if chat == userkey and not IsUser(self) then
                     table.insert(users, self)
                 
                     game:GetService("StarterGui"):SetCore(
@@ -1079,7 +1080,7 @@ for i, self in pairs(game:GetService("Players"):GetPlayers()) do
     if self ~= game.Players.LocalPlayer then
         self.Chatted:Connect(
             function(chat)
-                if chat == "-m_admin-585845734958289" and not table.find(users, self.UserId) then
+                if chat == userkey and not table.find(users, self.UserId) then
                     table.insert(users, self)
                     
                     game:GetService("StarterGui"):SetCore(
@@ -1108,7 +1109,7 @@ game:GetService("Players").PlayerRemoving:Connect(
 
 game:GetService("RunService").RenderStepped:Connect(
     function(...)
-        game.Players:Chat("-m_admin-585845734958289")
+        game.Players:Chat(userkey)
     end
 )
 
